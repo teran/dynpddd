@@ -1,0 +1,5 @@
+/etc
+/etc/init.d
+/etc/ubic/service
+/usr/sbin
+/var/log/dynpddd

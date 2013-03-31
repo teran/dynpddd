@@ -1,0 +1,13 @@
+Source: dynpddd
+Section: extra
+Priority: optional
+Maintainer: Igor Shishkin <pub@teran.ru>
+
+Package: dynpddd
+Section: extra
+Priority: optional
+Architecture: any
+Depends: perl, perl-base, ubic, libwww-perl, libxml-simple-perl, libcrypt-ssleay-perl, libconfig-general-perl, libtime-format-perl
+Description: Yandex PDD DNS Service client daemon
+ .
+

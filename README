@@ -1,0 +1,5 @@
+DynPDDd is a perl-written Yandex.PDD client daemon
+
+To use this daemon you need to obtain token from PDD API service: http://api.yandex.ru/pdd/doc/api-pdd/reference/api-dns_get_token.xml
+Obtained token should be placed to /etc/dynpddd.conf with other your domain specific settings
+
