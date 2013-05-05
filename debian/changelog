@@ -1,5 +1,12 @@
+dynpddd (0.2) unstable; urgency=low
+
+  * Quick fix for changed PDD API output
+  * Added logging issue in case if no domain entry found
+
+ -- Igor Shishkin <mail@teran.me>  Sun, 05 May 2013 13:15:00 +0400
+
 dynpddd (0.1) unstable; urgency=low
 
   * Initial release.
 
- -- Igor Shishkin <pub@teran.ru>  Sun, 24 Feb 2013 17:32:42 +0400
+ -- Igor Shishkin <mail@teran.me>  Sun, 24 Feb 2013 17:32:42 +0400
