@@ -69,8 +69,10 @@ while(1) {
     my $domain_list = XMLin($domain_list_req->content);
     my $records = $domain_list->{'domains'}->{'domain'}->{'response'}->{'record'};
     
+    my $selfcheck = 0;
     foreach my $id(keys %$records) {
         if($records->{$id}->{'subdomain'} eq $settings{'subdomain'} && $records->{$id}->{'domain'} eq sprintf('%s.%s', $settings{'subdomain'}, $settings{'domain'})) {
+            $selfcheck++;
             if($records->{$id}->{'content'} eq $ip && $records->{$id}->{'ttl'} eq $settings{'ttl'}) {
                 logmsg('Valid data in pdd dns service. No need to be updated.');
             } else {
@@ -84,6 +86,9 @@ while(1) {
             }
         }
     }
+    
+    logmsg('No domain entry found in PDD API output. Possibly subdomain not created.') if $selfcheck == 0;
+    
     sleep($settings{'ttl'});
 }
 
