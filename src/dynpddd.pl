@@ -70,7 +70,7 @@ while(1) {
     my $records = $domain_list->{'domains'}->{'domain'}->{'response'}->{'record'};
     
     foreach my $id(keys %$records) {
-        if($records->{$id}->{'subdomain'} eq $settings{'subdomain'} && $records->{$id}->{'domain'} eq $settings{'domain'}) {
+        if($records->{$id}->{'subdomain'} eq $settings{'subdomain'} && $records->{$id}->{'domain'} eq sprintf('%s.%s', $settings{'subdomain'}, $settings{'domain'})) {
             if($records->{$id}->{'content'} eq $ip && $records->{$id}->{'ttl'} eq $settings{'ttl'}) {
                 logmsg('Valid data in pdd dns service. No need to be updated.');
             } else {
