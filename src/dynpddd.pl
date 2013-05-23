@@ -9,7 +9,7 @@ use LWP::UserAgent;
 use Time::Format qw(%time);
 use XML::Simple;
 
-my $version = '0.1';
+my $version = '0.2';
 $0 = 'dynpddd';
 
 if(!-f '/etc/dynpddd.conf') {
@@ -24,7 +24,7 @@ if(!defined $config{'token'} || !defined $config{'domain'} || !defined $config{'
 
 my %settings = (
     'ttl' => 600,
-    'http_timeout' => 20,
+    'http_timeout' => 10,
     'log' => '/var/log/dynpddd/dynpddd.log',
 );
 
