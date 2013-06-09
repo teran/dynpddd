@@ -1,3 +1,9 @@
+DynPDDd - написанный на Perl клиент-демон для Яндекс.ПДД
+
+Для использования, необходимо получить API-токен тут: http://api.yandex.ru/pdd/doc/api-pdd/reference/api-dns_get_token.xml и положить его в соответствующую переменную сюда: /etc/dynpddd.conf, а так же поменять соответствующие настройки для своего домена.
+
+=== http://pdd.yandex.ru
+
 DynPDDd is a perl-written Yandex.PDD client daemon
 
 To use this daemon you need to obtain token from PDD API service: http://api.yandex.ru/pdd/doc/api-pdd/reference/api-dns_get_token.xml
